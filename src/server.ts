@@ -123,7 +123,6 @@ app.get("/refresh", (req, res)=>{
 // Authenticated end-point
 app.post("/something", (req, res)=>{
     const headers: any = req.headers
-    console.log(headers)
     if("authorization" !in Object.keys(headers)){
         res.status(403)
         return res.send({"error":"Unauthorized request"})
